@@ -1,0 +1,10 @@
+[Unit]
+Description=Translate received DDP packages to LED compatible bitpatterns and send them to an SPI MOSI pin.
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/ddp2spi
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
