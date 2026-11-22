@@ -3,8 +3,9 @@ Description=Translate received DDP packages to LED compatible bitpatterns and se
 After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/ddp2spi
 Restart=on-failure
+RestartSec=5
+ExecStart=/usr/local/bin/ddp2spi
 
 [Install]
 WantedBy=multi-user.target
